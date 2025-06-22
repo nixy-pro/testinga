@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JOB FREELANCE</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -14,100 +14,46 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: #111;
-      color: #f5f5f5;
-      overflow-x: hidden;
+      background-color: #0a0a0a;
+      color: #fff;
     }
 
-    .hero {
-      position: relative;
-      min-height: 100vh;
-      background: url('https://raw.githubusercontent.com/nixy-pro/testinga/refs/heads/main/freelance.jpg') center/cover no-repeat;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 2rem;
+    .hero-image {
+      width: 100%;
+      max-height: 500px;
+      overflow: hidden;
     }
 
-    .hero::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.6);
-      backdrop-filter: blur(2px);
-      z-index: 1;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      color: #e0c788;
-      text-shadow: 0 0 5px #000;
-    }
-
-    .hero-content h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    .hero-content p {
-      font-size: 1.1rem;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .promo {
-      background: #1b1b1b;
-      padding: 2rem 1rem;
-      color: #d4af37;
-      text-align: center;
-    }
-
-    .promo h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .promo ul {
-      list-style: disc;
-      padding-left: 1.5rem;
-      text-align: left;
-      max-width: 600px;
-      margin: 0 auto;
-      font-size: 1rem;
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
     .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      padding: 2rem;
-      background: #111;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 2rem 1rem;
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(255, 255, 255, 0.04);
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 16px;
-      padding: 1.5rem;
-      backdrop-filter: blur(6px);
-      box-shadow: 0 0 20px rgba(212, 175, 55, 0.08);
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+      padding: 1.5rem 1.2rem;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 0 20px rgba(255, 217, 0, 0.05);
+      max-width: 90%;
+      width: 100%;
+      text-align: center;
     }
 
     .card h2 {
       color: #ffd700;
       margin-bottom: 0.5rem;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
     }
 
     .card p {
@@ -120,47 +66,29 @@
       text-decoration: none;
       color: #ffd700;
       font-weight: bold;
+      border-bottom: 1px solid transparent;
+      transition: 0.3s ease;
+    }
+
+    .card a:hover {
+      border-color: #ffd700;
     }
 
     footer {
       text-align: center;
       padding: 2rem;
-      background: #000;
       font-size: 0.9rem;
       color: #777;
-    }
-
-    @media (max-width: 600px) {
-      .hero-content h1 {
-        font-size: 2rem;
-      }
-
-      .hero-content p {
-        font-size: 1rem;
-      }
-
-      .promo h2 {
-        font-size: 1.2rem;
-      }
     }
   </style>
 </head>
 <body>
-  <section class="hero">
-    <div class="hero-content">
-      <h1>JOB FREELANCE</h1>
-      <p>Temukan file kreatif & profesional untuk kebutuhanmu! Kerja santai bisa di mana aja.</p>
-    </div>
-  </section>
+  <!-- Gambar Thumbnail -->
+  <div class="hero-image">
+    <img src="https://raw.githubusercontent.com/nixy-pro/testinga/refs/heads/main/freelance.jpg" alt="Job Freelance Thumbnail">
+  </div>
 
-  <section class="promo">
-    <h2>Keuntungan Job Freelance:</h2>
-    <ul>
-      <li>Dibayar per-hari Rp20.000 sampai Rp100.000 bahkan bisa lebih tergantung skill masing-masing.</li>
-      <li>Kerja santai cuma main HP dapat cuan, cocok juga untuk kerja sampingan.</li>
-    </ul>
-  </section>
-
+  <!-- Kartu File -->
   <section class="cards">
     <div class="card">
       <h2>CTC Design 01</h2>
@@ -180,7 +108,7 @@
   </section>
 
   <footer>
-    © 2025 JOB FREELANCE — Dibuat oleh tim kreatif dengan kopi & niat 💻☕
+    © 2025 JOB FREELANCE — Dibuat dengan semangat & kopi ☕
   </footer>
 </body>
 </html>
