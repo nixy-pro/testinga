@@ -2,9 +2,9 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CTC Freelance Showcase</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JOB FREELANCE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -13,164 +13,131 @@
     }
 
     body {
-      font-family: 'Poppins', sans-serif;
-      background: #0f0f0f;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1f1f2f);
       color: #fff;
+      min-height: 100vh;
       overflow-x: hidden;
     }
 
     .hero {
       position: relative;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      padding: 4rem 2rem;
       text-align: center;
-      background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d') center/cover no-repeat;
+      overflow: hidden;
     }
 
-    .overlay {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.7);
-      z-index: 1;
+    .hero h1 {
+      font-size: 2.5rem;
+      z-index: 2;
+      position: relative;
+    }
+
+    .hero p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+      color: #bbb;
+      z-index: 2;
+      position: relative;
     }
 
     .background-logo {
+      content: "JOB FREELANCE";
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      font-size: 6rem;
-      font-weight: 600;
-      color: rgba(255, 255, 255, 0.05);
+      font-size: 10rem;
+      font-weight: bold;
+      color: rgba(0, 255, 255, 0.05);
+      filter: blur(4px);
       white-space: nowrap;
-      z-index: 0;
       pointer-events: none;
-      text-shadow: 0 0 10px #0ff, 0 0 40px #0ff;
-      animation: flicker 4s infinite;
+      z-index: 0;
+      animation: shine 6s linear infinite;
     }
 
-    @keyframes flicker {
-      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-        opacity: 1;
-      }
-      20%, 24%, 55% {
-        opacity: 0.4;
-      }
-    }
-
-    .hero-content {
-      z-index: 2;
-      position: relative;
-      animation: fadeInUp 1.5s ease-out forwards;
-    }
-
-    .hero-content h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero-content p {
-      font-size: 1.2rem;
-      color: #ccc;
-    }
-
-    @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    @keyframes shine {
+      0% { transform: translate(-50%, -50%) rotate(0deg); }
+      100% { transform: translate(-50%, -50%) rotate(360deg); }
     }
 
     .cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 4rem 2rem;
-      background-color: #1a1a1a;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .card {
-      background: #222;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 16px;
       padding: 2rem;
-      width: 300px;
-      box-shadow: 0 8px 24px rgba(0, 255, 255, 0.1);
-      transition: transform 0.4s, box-shadow 0.4s;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 20px rgba(0,255,255,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 12px 32px rgba(0, 255, 255, 0.3);
+      box-shadow: 0 0 40px rgba(0,255,255,0.2);
     }
 
     .card h2 {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
       color: #0ff;
+      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
     }
 
     .card p {
-      font-size: 1rem;
-      color: #bbb;
+      font-size: 0.95rem;
+      color: #ccc;
       margin-bottom: 1rem;
     }
 
     .card a {
-      display: inline-block;
-      color: #0ff;
       text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s;
+      color: #0ff;
+      font-weight: bold;
+      border-bottom: 1px solid transparent;
+      transition: all 0.3s ease;
     }
 
     .card a:hover {
-      color: #fff;
+      border-color: #0ff;
     }
 
     footer {
       text-align: center;
       padding: 2rem;
-      background-color: #111;
-      color: #666;
       font-size: 0.9rem;
+      color: #888;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 600px) {
       .background-logo {
-        font-size: 3rem;
+        font-size: 4rem;
       }
 
-      .hero-content h1 {
-        font-size: 2rem;
+      .hero h1 {
+        font-size: 1.8rem;
       }
 
-      .hero-content p {
+      .hero p {
         font-size: 1rem;
-      }
-
-      .cards {
-        padding: 2rem 1rem;
       }
     }
   </style>
 </head>
 <body>
-  <header class="hero">
+  <section class="hero">
     <div class="background-logo">JOB FREELANCE</div>
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>CTC Freelance Files</h1>
-      <p>Temukan file kreatif & profesional untuk kebutuhanmu!</p>
-    </div>
-  </header>
+    <h1>CTC Freelance Files</h1>
+    <p>Temukan file kreatif & profesional untuk kebutuhanmu!</p>
+  </section>
 
   <section class="cards">
     <div class="card">
@@ -180,18 +147,20 @@
     </div>
     <div class="card">
       <h2>CTC Pitchdeck</h2>
-      <p>Presentasi untuk klien freelance.</p>
+      <p>Presentasi menarik untuk klien freelance.</p>
       <a href="#">Lihat File</a>
     </div>
     <div class="card">
       <h2>CTC CV Kreatif</h2>
-      <p>Resume interaktif yang menonjol.</p>
+      <p>Resume interaktif yang menonjol dan profesional.</p>
       <a href="#">Lihat File</a>
     </div>
   </section>
 
   <footer>
-    <p>© 2025 CTC Freelance. Dibuat dengan semangat dan kopi ☕</p>
+    © 2025 JOB FREELANCE — Dibuat dengan semangat & kopi ☕
   </footer>
 </body>
 </html>
+
+
