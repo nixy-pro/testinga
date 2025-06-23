@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -7,45 +6,60 @@
   <title>JOB FREELANCE</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: 'Inter', sans-serif;
-      background-color: #23231F;
+      background-color: #000405;
       color: #D4AF37;
     }
+
     .hero img {
       width: 100%;
       height: auto;
       display: block;
     }
+
     .contact-wrapper {
       text-align: center;
       margin-top: 1.5rem;
     }
-    .contact-button,
-    .lihat-button {
-      display: inline-block;
-      background-color: #D4AF37;
+
+    button {
+      background: linear-gradient(to bottom, #FFD700, #D4AF37);
       color: #000;
       padding: 12px 24px;
       border-radius: 999px;
       font-weight: bold;
       font-family: 'Poppins', sans-serif;
-      box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
       cursor: pointer;
-      transition: transform 0.3s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
       border: none;
       outline: none;
       text-decoration: none;
       appearance: none;
       -webkit-appearance: none;
-      user-select: none;
+      box-shadow: 0 4px 0 #b18f2c;
     }
-    .contact-button:hover,
-    .lihat-button:hover {
-      transform: scale(1.05);
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 0 #b18f2c;
     }
+
+    button:active {
+      transform: translateY(2px);
+      box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    button:focus {
+      outline: none !important;
+    }
+
     .cards {
       display: flex;
       flex-direction: column;
@@ -53,6 +67,7 @@
       padding: 2rem 1rem;
       gap: 1.5rem;
     }
+
     .card {
       background-color: rgba(255, 255, 255, 0.03);
       border: 1px solid rgba(255, 255, 255, 0.06);
@@ -61,18 +76,20 @@
       width: 90%;
       max-width: 360px;
       text-align: center;
-      box-sizing: border-box;
     }
+
     .card h2 {
       font-size: 1.2rem;
       color: #D4AF37;
       margin-bottom: 0.5rem;
     }
+
     .card p {
       color: #ccc;
       font-size: 0.95rem;
       margin-bottom: 1rem;
     }
+
     .popup {
       position: fixed;
       top: 50%;
@@ -90,24 +107,16 @@
       margin: auto;
       text-align: left;
     }
+
     .popup h3 {
       margin-top: 0;
     }
+
     .popup button {
       margin-top: 1rem;
       padding: 10px 20px;
-      background-color: #D4AF37;
-      color: #000;
-      border: none;
-      border-radius: 999px;
-      font-weight: bold;
-      cursor: pointer;
-      outline: none;
-      appearance: none;
     }
-    .popup button:hover {
-      background-color: #e5c85b;
-    }
+
     footer {
       text-align: center;
       font-size: 0.8rem;
@@ -118,68 +127,20 @@
 </head>
 <body>
   <div class="hero">
-    <img src="freelance.jpg" alt="Job Freelance Banner" />
+    <img src="freelance.jpg" alt="JOB FREELANCE " />
   </div>
-
+    <div class="hero">
+    <img src="1.png" alt="JOB FREELANCE " />
+  </div>
+  
   <div class="contact-wrapper">
-    <button class="contact-button" onclick="window.open('https://wa.me/6281234567890', '_blank')">
-      ☎️ Hubungi Kami
-    </button>
+<h4><center>HUBUNGI<br>ADMIN<br>▼▼▼</center></h4><br>
+    <button onclick="window.open('https://chat.whatsapp.com/CsmaDHeReqp1KQbPc9Q4CI', '_blank')">📞</button>
   </div>
 
-  <section class="cards">
-    <div class="card">
-      <h2>CTC Design 01</h2>
-      <p>Template modern dan siap pakai.</p>
-      <button class="lihat-button" onclick="showPopup(0)">Lihat File</button>
-    </div>
-    <div class="card">
-      <h2>CTC Pitchdeck</h2>
-      <p>Presentasi menarik untuk klien freelance.</p>
-      <button class="lihat-button" onclick="showPopup(1)">Lihat File</button>
-    </div>
-    <div class="card">
-      <h2>CTC CV Kreatif</h2>
-      <p>Resume interaktif yang menonjol dan profesional.</p>
-      <button class="lihat-button" onclick="showPopup(2)">Lihat File</button>
-    </div>
-  </section>
 
-  <div class="popup" id="popup">
-    <h3 id="popup-title">Judul File</h3>
-    <p id="popup-desc">Deskripsi file akan muncul di sini.</p>
-    <button onclick="hidePopup()">Tutup</button>
-  </div>
 
   <footer>
-    © 2025 JOB FREELANCE — Dibuat dengan semangat & kopi ☕
   </footer>
-
-  <script>
-    const data = [
-      {
-        title: "CTC Design 01",
-        desc: "📁 Format: PPTX<br/>Ukuran: 1.2 MB<br/>Status: Gratis digunakan"
-      },
-      {
-        title: "CTC Pitchdeck",
-        desc: "📁 Format: PDF<br/>Ukuran: 850 KB<br/>Status: Premium sample"
-      },
-      {
-        title: "CTC CV Kreatif",
-        desc: "📁 Format: DOCX<br/>Ukuran: 400 KB<br/>Status: Siap edit"
-      }
-    ];
-
-    function showPopup(index) {
-      document.getElementById('popup-title').innerText = data[index].title;
-      document.getElementById('popup-desc').innerHTML = data[index].desc;
-      document.getElementById('popup').style.display = 'block';
-    }
-
-    function hidePopup() {
-      document.getElementById('popup').style.display = 'none';
-    }
-  </script>
 </body>
 </html>
