@@ -34,12 +34,13 @@
       cursor: pointer;
       transition: transform 0.3s ease;
       border: none;
-      text-decoration: none;
       outline: none;
+      text-decoration: none;
     }
     .contact-button:hover {
       transform: scale(1.05);
     }
+
     .cards {
       display: flex;
       flex-direction: column;
@@ -67,6 +68,7 @@
       font-size: 0.95rem;
       margin-bottom: 1rem;
     }
+
     .lihat-button {
       display: inline-block;
       background-color: #D4AF37;
@@ -82,9 +84,18 @@
       border: none;
       outline: none;
     }
+
     .lihat-button:hover {
       transform: scale(1.05);
     }
+
+    .lihat-button:focus,
+    .lihat-button:active {
+      outline: none;
+      background-color: #D4AF37;
+      box-shadow: 0 0 12px rgba(212, 175, 55, 0.4);
+    }
+
     .popup {
       position: fixed;
       top: 50%;
@@ -119,6 +130,7 @@
     .popup button:hover {
       background-color: #e5c85b;
     }
+
     footer {
       text-align: center;
       font-size: 0.8rem;
